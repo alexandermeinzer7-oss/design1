@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanUpgrade | CAD & 3D Grundriss-Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .gradient-text { background: linear-gradient(90deg, #2563eb, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Verhindert das Scrollen beim Wischen über den Slider auf dem Handy */
+        #compare-container { touch-action: pan-y; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">PLAN<span class="text-blue-600">UPGRADE</span></div>
+            <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                <a href="#services" class="hover:text-blue-600 transition">Leistungen</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Kontakt</a>
+            </div>
+            <a href="#contact" class="bg-blue-600 text-white px-7 py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                Anfrage starten
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+                    Ihre Skizze als <span class="gradient-text">High-End</span> Grundriss.
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Ich verwandle handgezeichnete Entwürfe und alte Scans in professionelle CAD-Dateien, 2D-Exposés und fotorealistische 3D-Modelle. Schnell, präzise und bereit für den Verkauf.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Projekt hochladen</a>
+                </div>
+            </div>
+            
+            <div class="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white select-none cursor-ew-resize bg-slate-100" id="compare-container">
+                
+                <img src="3D.png" alt="3D Grundriss" class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none">
+                
+                <img src="CAD.png" alt="CAD Grundriss" id="compare-before" class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                
+                <div id="compare-handle" class="absolute top-0 bottom-0 w-1 bg-white left-1/2 -ml-[2px] shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-slate-200">
+                        <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8M8 17h8M10 12l-2-2m0 0l2-2m-2 2h8m-2 2l2-2m0 0l-2-2" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="absolute bottom-4 left-4 bg-slate-900/70 text-white px-3 py-1 rounded-md text-sm font-semibold backdrop-blur-sm pointer-events-none">CAD Datei</div>
+                <div class="absolute bottom-4 right-4 bg-slate-900/70 text-white px-3 py-1 rounded-md text-sm font-semibold backdrop-blur-sm pointer-events-none">3D Modell</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Digitale Architektur-Services</h2>
+                <p class="text-slate-500">Präzision für Makler, Architekten und Bauherren.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-[2rem] bg-slate-50 hover:bg-blue-50 transition duration-500 group border-2 border-transparent hover:border-blue-100">
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600">CAD Konvertierung</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-2">✓ DWG / DXF / PDF</li>
+                        <li class="flex items-center gap-2">✓ Millimetergenau</li>
+                        <li class="flex items-center gap-2">✓ Editierbare Layer</li>
+                    </ul>
+                </div>
+                <div class="p-10 rounded-[2rem] bg-slate-50 hover:bg-blue-50 transition duration-500 group border-2 border-transparent hover:border-blue-100">
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600">2D Marketing</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-2">✓ Möblierungsvorschläge</li>
+                        <li class="flex items-center gap-2">✓ Flächenberechnung</li>
+                        <li class="flex items-center gap-2">✓ Modernes Branding</li>
+                    </ul>
+                </div>
+                <div class="p-10 rounded-[2rem] bg-slate-50 hover:bg-blue-50 transition duration-500 group border-2 border-transparent hover:border-blue-100">
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600">3D Modellierung</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-center gap-2">✓ Fotorealistische Render</li>
+                        <li class="flex items-center gap-2">✓ Puppenhaus-Ansicht</li>
+                        <li class="flex items-center gap-2">✓ Virtuelle Rundgänge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white/5 p-8 md:p-12 rounded-[3rem] border border-white/10 backdrop-blur-lg">
+                <h2 class="text-4xl font-bold mb-6 text-center">Starten Sie Ihr Upgrade</h2>
+                <p class="text-slate-400 text-center mb-12">Laden Sie Ihre Datei hoch und Sie erhalten innerhalb weniger Stunden ein Angebot.</p>
+                
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Name" class="w-full p-4 md:p-5 rounded-2xl bg-white/10 border border-white/20 focus:border-blue-500 focus:outline-none transition">
+                        <input type="email" placeholder="E-Mail" class="w-full p-4 md:p-5 rounded-2xl bg-white/10 border border-white/20 focus:border-blue-500 focus:outline-none transition">
+                    </div>
+                    <select class="w-full p-4 md:p-5 rounded-2xl bg-white/10 border border-white/20 focus:border-blue-500 focus:outline-none transition appearance-none">
+                        <option class="text-slate-900" disabled selected>Gewünschter Service...</option>
+                        <option class="text-slate-900">CAD Digitalisierung</option>
+                        <option class="text-slate-900">2D Exposé Plan</option>
+                        <option class="text-slate-900">3D Visualisierung</option>
+                    </select>
+                    <textarea placeholder="Besonderheiten (z.B. Maße fehlen, Express erwünscht...)" rows="4" class="w-full p-4 md:p-5 rounded-2xl bg-white/10 border border-white/20 focus:border-blue-500 focus:outline-none transition"></textarea>
+                    
+                    <button type="submit" class="w-full bg-blue-600 py-5 rounded-2xl font-extrabold text-lg md:text-xl hover:bg-blue-500 transition shadow-2xl shadow-blue-500/20">
+                        Unverbindliches Angebot anfragen
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 bg-slate-50">
+        <p>&copy; 2026 PlanUpgrade | Qualität Made in Germany</p>
+    </footer>
+
+    <script>
+        const container = document.getElementById('compare-container');
+        const beforeImage = document.getElementById('compare-before');
+        const handle = document.getElementById('compare-handle');
+        let isDragging = false;
+
+        const moveSlider = (e) => {
+            if (!isDragging) return;
+            
+            let rect = container.getBoundingClientRect();
+            let x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+            
+            let percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            
+            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            handle.style.left = `${percentage}%`;
+        };
+
+        container.addEventListener('mousedown', () => isDragging = true);
+        container.addEventListener('touchstart', () => isDragging = true);
+        
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('touchend', () => isDragging = false);
+        
+        window.addEventListener('mousemove', moveSlider);
+        window.addEventListener('touchmove', moveSlider);
+    </script>
+</body>
+</html>
